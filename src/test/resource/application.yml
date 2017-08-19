@@ -1,0 +1,12 @@
+#spring:
+#    profiles:
+#        active: test
+#    datasource:
+#        url: jdbc:h2:mem:mytestdata;DB_CLOSE_DELAY=-1
+#        driver-class-name: org.h2.Driver
+#        name:
+#        username:
+#        password:
+#    jpa:
+#        hibernate.ddl-auto: create-drop
+#        database: h2
