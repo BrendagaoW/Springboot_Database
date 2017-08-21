@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.EmbeddedDatabaseConnection;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
@@ -20,6 +21,7 @@ import static org.junit.Assert.assertThat;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @DataJpaTest
+@ComponentScan(basePackages = {"com.example.demo.service"})
 @AutoConfigureTestDatabase(connection = EmbeddedDatabaseConnection.H2)
 public class UserServiceTest {
 

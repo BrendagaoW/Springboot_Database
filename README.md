@@ -35,7 +35,7 @@ relational database.
 
 Use @Service to note the **Service, which manipulate the autowired **Repository. 
 
-Moreover, should use @ComponentScan upper the DemoApplication, so the objects 
+Moreover, should use @SpringBootApplication upper the DemoApplication, so the objects 
 noted by @Component, @Service and @Repository can be regarded as beans.
 
 ##4. Use H2 embedded database to Junit test
@@ -44,5 +44,9 @@ the real database, embedded databases can be choose, such as H2.
 Then noting the test classes with @DataJpaTest and 
 @AutoConfigureTestDatabase(connection = EmbeddedDatabaseConnection.H2).
 Now we can test the methods easily!
+
+What's more, @ComponentScan should be added upper the Test class. 
+So the related services should be known as beans.
+
 
 In this way, application.properties about test environment is unnecessary.
